@@ -1,0 +1,1289 @@
+/*========================================================
+                HAPPY BIRTHDAY ZAHRA ❤️
+                    STYLE.CSS
+                    PART 1
+========================================================*/
+
+
+/*=========================
+        RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#fdf8f3;
+    color:#3b2c2c;
+    overflow-x:hidden;
+
+}
+
+
+/*=========================
+      COMMON SECTIONS
+=========================*/
+
+section{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    position:relative;
+
+    padding:60px 20px;
+
+}
+
+.contentSection{
+
+    display:none;
+
+}
+
+
+/*=========================
+      LOADING SCREEN
+=========================*/
+
+#loadingScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#fdf8f3;
+
+    z-index:9999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:1s;
+
+}
+
+.loadingContent{
+
+    text-align:center;
+
+}
+
+.loadingContent h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+
+    color:#b88b4a;
+
+    margin-bottom:35px;
+
+}
+
+.loadingDots{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+
+}
+
+.loadingDots span{
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    animation:loadingBounce 1s infinite;
+
+}
+
+.loadingDots span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.loadingDots span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes loadingBounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=========================
+       GIFT SECTION
+=========================*/
+
+#giftSection{
+
+    background:linear-gradient(180deg,#fffaf5,#fdf3ea);
+
+    overflow:hidden;
+
+}
+
+.backgroundGlow{
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,215,120,.18);
+
+    filter:blur(80px);
+
+}
+
+.giftHint{
+
+    font-size:1rem;
+
+    color:#7b5d3a;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    letter-spacing:.5px;
+
+}
+
+.giftContainer{
+
+    position:relative;
+
+}
+
+.giftImage{
+
+    width:240px;
+
+    max-width:80vw;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+    user-select:none;
+
+}
+
+#openedGift{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    opacity:0;
+
+    transform:scale(.85);
+
+}
+
+#openedGift.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+#closedGift.hide{
+
+    opacity:0;
+
+    transform:scale(.85);
+
+}
+
+.tapText{
+
+    margin-top:35px;
+
+    color:#8b6c45;
+
+    font-size:1.05rem;
+
+    text-align:center;
+
+}
+
+#lightFlash{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.8s;
+
+    z-index:999;
+
+}/*========================================================
+                    STYLE.CSS
+                    PART 2
+========================================================*/
+
+
+/*=========================
+      WELCOME SECTION
+=========================*/
+
+#welcomeSection{
+
+    display:none;
+
+    background:linear-gradient(180deg,#fffdf9,#fdf6ef);
+
+    text-align:center;
+
+}
+
+.welcomeContent{
+
+    max-width:700px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.smallTitle{
+
+    font-size:1.2rem;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+
+    color:#9b7d55;
+
+    margin-bottom:18px;
+
+}
+
+.mainName{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4.5rem;
+
+    color:#b88746;
+
+    margin-bottom:22px;
+
+}
+
+.divider{
+
+    width:120px;
+
+    height:2px;
+
+    background:#d9b66c;
+
+    margin:25px auto;
+
+    border-radius:5px;
+
+}
+
+.subtitle{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    color:#4e3b2f;
+
+    margin-bottom:20px;
+
+}
+
+.date{
+
+    font-size:1.15rem;
+
+    color:#7d6548;
+
+    font-weight:400;
+
+    letter-spacing:1px;
+
+}
+
+
+/*=========================
+      CONTINUE BUTTON
+=========================*/
+
+#continueBtn,
+.nextBtn{
+
+    margin-top:45px;
+
+    padding:15px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#d9b66c;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-family:'Poppins',sans-serif;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+#continueBtn{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+#continueBtn.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+#continueBtn:hover,
+.nextBtn:hover{
+
+    transform:translateY(-4px);
+
+    background:#c79c4c;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+
+/*=========================
+      BOUQUET SECTION
+=========================*/
+
+#bouquetSection{
+
+    display:none;
+
+    background:linear-gradient(180deg,#fff8f2,#fdf2e8);
+
+    text-align:center;
+
+}
+
+.bouquetImage{
+
+    width:320px;
+
+    max-width:85vw;
+
+    margin-bottom:40px;
+
+    animation: floatBouquet 4s ease-in-out infinite;
+
+}
+
+.sectionText{
+
+    max-width:700px;
+
+}
+
+.sectionText h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.3rem;
+
+    color:#7a5633;
+
+    margin-bottom:18px;
+
+}
+
+.sectionText p{
+
+    font-size:1.15rem;
+
+    color:#5c4b40;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.sectionText h3{
+
+    font-size:1.5rem;
+
+    color:#b88645;
+
+    font-weight:500;
+
+}
+
+
+/*=========================
+      GENERAL ANIMATION
+=========================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatBouquet{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes bouquetEntrance{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(100px) scale(.85);
+
+    }
+
+    60%{
+
+        opacity:1;
+
+        transform:translateY(-15px) scale(1.05);
+
+    }
+
+    80%{
+
+        transform:translateY(5px) scale(.98);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+/*========================================================
+                    STYLE.CSS
+                    PART 3
+========================================================*/
+
+
+/*=========================
+        LETTER SECTION
+=========================*/
+
+#letterSection{
+
+    display:none;
+
+    background:linear-gradient(180deg,#fffdf9,#f8f0e6);
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.letterCard{
+
+    width:90%;
+    max-width:850px;
+
+    background:white;
+
+    padding:55px 45px;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    animation:fadeUp 1s ease;
+
+}
+
+.letterCard h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.8rem;
+
+    color:#b88645;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.letterCard p{
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    color:#4d4036;
+
+    margin-bottom:22px;
+
+}
+
+.letterCard strong{
+
+    color:#a46b2d;
+
+}
+
+.letterCard h3{
+
+    margin-top:45px;
+
+    text-align:right;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    color:#b88645;
+
+}
+
+
+/*=========================
+    ILLUSTRATION SECTION
+=========================*/
+
+#illustrationSection{
+
+    display:none;
+
+    background:linear-gradient(180deg,#fff9f3,#fef4ea);
+
+    text-align:center;
+
+}
+
+.illustrationText{
+
+    max-width:720px;
+
+    margin-bottom:45px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.illustrationText h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.6rem;
+
+    color:#7c5935;
+
+    margin-bottom:18px;
+
+}
+
+.illustrationText p{
+
+    font-size:1.15rem;
+
+    color:#665241;
+
+    line-height:1.8;
+
+}
+
+.illustrationImage{
+
+    width:500px;
+
+    max-width:92vw;
+
+    border-radius:20px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:1.5s;
+
+}
+
+.illustrationImage.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*=========================
+      NEXT BUTTON
+=========================*/
+
+.nextBtn{
+
+    margin-top:55px;
+
+}
+
+
+/*=========================
+      CARD HOVER
+=========================*/
+
+.letterCard:hover{
+
+    transform:translateY(-4px);
+
+    transition:.4s;
+
+    box-shadow:0 28px 60px rgba(0,0,0,.12);
+
+}
+
+.illustrationImage:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/*=========================
+      FADE ANIMATION
+=========================*/
+
+.fadeIn{
+
+    animation:fadeUp 1s ease;
+
+}/*========================================================
+                    STYLE.CSS
+                    PART 4
+========================================================*/
+
+
+/*=========================
+        ENDING SECTION
+=========================*/
+
+#endingSection{
+
+    display:none;
+
+    background:linear-gradient(180deg,#fffdf8,#f8efe4);
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+.endingContent{
+
+    max-width:750px;
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.endingContent h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.8rem;
+
+    color:#7a5837;
+
+    margin-bottom:25px;
+
+    line-height:1.4;
+
+}
+
+.endingContent h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+
+    color:#c19146;
+
+    margin-bottom:35px;
+
+}
+
+.endingContent h4{
+
+    margin-top:30px;
+
+    font-size:1.8rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#8f673a;
+
+}
+
+.thankYou{
+
+    margin-top:70px;
+
+    opacity:0;
+
+    transition:2s;
+
+}
+
+.thankYou.show{
+
+    opacity:1;
+
+}
+
+.thankYou p{
+
+    font-size:1.15rem;
+
+    color:#5b4637;
+
+    margin-bottom:12px;
+
+}
+
+
+/*=========================
+      FLOATING PETALS
+=========================*/
+
+#petals{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:50;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-60px;
+
+    width:22px;
+
+    height:22px;
+
+    background-image:url("assets/images/petal.png");
+
+    background-size:contain;
+
+    background-repeat:no-repeat;
+
+    animation:petalFall linear forwards;
+
+    opacity:.85;
+
+}
+
+@keyframes petalFall{
+
+    from{
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            translateY(115vh)
+            rotate(360deg);
+
+    }
+
+}
+
+
+/*=========================
+         SPARKLES
+=========================*/
+
+#sparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:9999;
+
+}
+
+.sparkle{
+
+    position:absolute;
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    background:#fff7b2;
+
+    box-shadow:
+        0 0 10px #ffffff,
+        0 0 20px #ffd86b,
+        0 0 35px #ffcc33,
+        0 0 50px #fff2a8;
+
+    animation:sparkle 2s linear forwards;
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:0;
+        transform:scale(0);
+
+    }
+
+    30%{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+        transform:scale(0);
+
+    }
+
+}
+
+/*=========================
+      GIFT ANIMATION
+=========================*/
+
+.giftBounce{
+
+    animation:giftBounce .55s ease;
+
+}
+
+@keyframes giftBounce{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    40%{
+
+        transform:scale(.9);
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*=========================
+      LIGHT FLASH
+=========================*/
+
+#lightFlash.show{
+
+    opacity:1;
+
+}
+
+
+/*=========================
+        SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d2ab62;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#faf3ea;
+
+}
+
+
+/*=========================
+      MOBILE RESPONSIVE
+=========================*/
+
+@media(max-width:768px){
+
+    section{
+
+        padding:45px 18px;
+
+    }
+
+    .mainName{
+
+        font-size:3rem;
+
+    }
+
+    .subtitle{
+
+        font-size:1.6rem;
+
+    }
+
+    .letterCard{
+
+        padding:35px 24px;
+
+    }
+
+    .letterCard h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .letterCard p{
+
+        font-size:1rem;
+
+        line-height:1.9;
+
+    }
+
+    .illustrationText h2{
+
+        font-size:2rem;
+
+    }
+
+    .illustrationText p{
+
+        font-size:1rem;
+
+    }
+
+    .endingContent h2{
+
+        font-size:2rem;
+
+    }
+
+    .endingContent h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .giftImage{
+
+        width:200px;
+
+    }
+
+    .bouquetImage{
+
+        width:260px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .mainName{
+
+        font-size:2.5rem;
+
+    }
+
+    .subtitle{
+
+        font-size:1.3rem;
+
+    }
+
+    .giftImage{
+
+        width:180px;
+
+    }
+
+    .letterCard{
+
+        width:95%;
+
+    }
+
+    .endingContent h2{
+
+        font-size:1.7rem;
+
+    }
+
+} 
+
+/*=========================
+        EASTER EGG
+=========================*/
+
+#secretTrigger{
+
+    display:none;
+
+    opacity:0;
+
+    transform:translateY(15px);
+
+    text-align:center;
+
+    margin-top:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:#b45b6a;
+
+    transition:.8s ease;
+
+}
+
+#secretTrigger.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+#secretPopup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(8px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.4s;
+
+    z-index:99999;
+
+}
+
+#secretPopup.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+.popupCard{
+
+    width:min(90%,420px);
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transform:scale(.8);
+
+    transition:.4s;
+
+    box-shadow:0 15px 50px rgba(0,0,0,.25);
+
+}
+
+#secretPopup.show .popupCard{
+
+    transform:scale(1);
+
+}
+
+.popupCard p{
+
+    line-height:1.8;
+
+}
+
+#closeSecret{
+
+    margin-top:20px;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+}
